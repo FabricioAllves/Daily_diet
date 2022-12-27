@@ -7,6 +7,7 @@ import { Home } from '@pages/Home';
 
 import { Estatisticas } from '@pages/Estatisticas';
 import { StatusBar } from 'react-native';
+import { New } from '@pages/New';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });

@@ -1,9 +1,9 @@
-import { TouchableOpacityProps } from 'react-native';
+import { Text, TouchableOpacityProps } from 'react-native';
 import { Container, Icon, IconWraper, Percentage, TitleWraper, TextT, ButtonTypeStyleProps } from './styles';
 
 type Props = TouchableOpacityProps & {
-  percentage: string;
-  title: string;
+  percentage?: string;
+  title?: string;
   type?: ButtonTypeStyleProps
 }
 
