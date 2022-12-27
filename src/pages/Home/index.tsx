@@ -1,44 +1,41 @@
+import { useState } from 'react';
+
 import { Button } from '@components/Button';
 import { Header } from '@components/Header';
 import { PorcentageCard } from '@components/PorcentageCard';
+import { SectionListFood } from '@components/SectionListFood';
+
 import { SectionList, Text, StyleSheet, View } from 'react-native';
 
 import { Container } from './styles';
 
-type Item = string
-
-interface Section {
-  title: string;
-  data?: Item[]
-}
 
 
-const DATA = [
-  {
-    title: "26.12.22",
-    data: ["Pizza", "Burger", "Risotto"]
-  },
-  {
-    title: "20.12.22",
-    data: ["French Fries", "Onion Rings", "Fried Shrimps"]
-  },
-  {
-    title: "16.12.22",
-    data: ["Water", "Coke", "Beer"]
-  },
-  {
-    title: "17.12.22",
-    data: ["Cheese Cake", "Ice Cream"]
-  }
-];
 
-const Item = ({ title }: Section) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
+
+
+
 
 export function Home() {
+  const [data, setData] = useState([
+    {
+      title: "26.12.22",
+      data: ["20:00 | Pizza", "16:00 | Burger", " 12:30 | Risotto"],
+    },
+    {
+      title: "20.12.22",
+      data: ["20:00 | French Fries", "20:00 | Onion Rings", "20:00 | Fried Shrimps"]
+    },
+    {
+      title: "16.12.22",
+      data: ["20:00 | Water", "20:00 | Coke", "20:00 | Beer"]
+    },
+    {
+      title: "17.12.22",
+      data: ["20:00 | Cheese Cake", "20:00 | Ice Cream"]
+    }
+  ])
+
   return (
     <Container>
       <Header />
@@ -54,12 +51,13 @@ export function Home() {
 
 
       <SectionList
-        sections={DATA}
-        keyExtractor={(item, index) => item + index}
-        renderItem={({ item }) => <Item title={item} />}
+        sections={data}
+        keyExtractor={item => item}
+        renderItem={({ item }) => <SectionListFood title={item} />}
         renderSectionHeader={({ section: { title } }) => (
-          <Text style={styles.header}>{title}</Text>
+          <Text style={{fontSize: 18, backgroundColor: '#fff', paddingTop: 30, paddingBottom: 8}}>{title}</Text>
         )}
+        showsVerticalScrollIndicator={false}
       />
 
     </Container>
@@ -71,17 +69,10 @@ export function Home() {
 
 const styles = StyleSheet.create({
 
-  item: {
-    backgroundColor: "#f9c2ff",
-    padding: 20,
-    marginVertical: 8
-  },
   header: {
     fontSize: 25,
     backgroundColor: "#fff",
     marginTop: 20
   },
-  title: {
-    fontSize: 24
-  }
+
 });

@@ -13,7 +13,7 @@ export function Button({ title, teste }: Props) {
   return (
     <View>
       <Text style={{paddingBottom: 20, fontSize: 16}}>{teste}</Text>
-      <Container>
+      <Container activeOpacity={0.8}>
         <Icon />
         <TitleButton>
           {title}

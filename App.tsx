@@ -5,12 +5,20 @@ import theme from './src/theme';
 import { Loading } from '@components/Loading';
 import { Home } from '@pages/Home';
 
+import { Estatisticas } from '@pages/Estatisticas';
+import { StatusBar } from 'react-native';
+
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? <Home/> : <Loading />}
+      <StatusBar
+        barStyle='light-content'
+        backgroundColor="transparent"
+        translucent
+      />
+      {fontsLoaded ? <Estatisticas /> : <Loading />}
     </ThemeProvider>
   );
 }
