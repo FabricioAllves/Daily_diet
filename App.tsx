@@ -5,9 +5,7 @@ import theme from './src/theme';
 import { Loading } from '@components/Loading';
 import { Home } from '@pages/Home';
 
-import { Estatisticas } from '@pages/Estatisticas';
 import { StatusBar } from 'react-native';
-import { New } from '@pages/New';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });
@@ -19,7 +17,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Estatisticas /> : <Loading />}
+      {fontsLoaded ? <Home /> : <Loading />}
     </ThemeProvider>
   );
 }
