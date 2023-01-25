@@ -3,7 +3,6 @@ import styled from 'styled-components/native';
 export const Item = styled.View`
   background-color: #fff;
   padding: 11px;
-  margin-top: 8px;
   margin-bottom: 8px;
   border-width: 1px;
   border-color: ${({ theme }) => theme.COLORS.GRAY_300};
@@ -12,7 +11,6 @@ export const Item = styled.View`
   justify-content: center;
   align-items: center;
 `;
-
 
 export const Title = styled.Text`
   font-size: ${({theme}) => theme.FONT_SIZE.MG}px;

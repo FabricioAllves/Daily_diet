@@ -46,28 +46,17 @@ export function Home() {
 
 
       <SectionList
+      style={{marginTop: 25}}
         sections={data}
         keyExtractor={item => item}
         renderItem={({ item }) => <SectionListFood title={item} />}
         renderSectionHeader={({ section }) => (
-          <Text style={{fontSize: 18, backgroundColor: '#fff', paddingTop: 30, paddingBottom: 8}}>{section.title}</Text>
+          <Text style={{fontSize: 18, paddingBottom: 8, paddingTop: 15 }}>{section.title}</Text>
         )}
         showsVerticalScrollIndicator={false}
+        
       />
 
     </Container>
   )
 }
-
-
-
-
-const styles = StyleSheet.create({
-
-  header: {
-    fontSize: 25,
-    backgroundColor: "#fff",
-    marginTop: 20
-  },
-
-});
