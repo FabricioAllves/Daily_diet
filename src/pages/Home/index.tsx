@@ -39,21 +39,24 @@ export function Home() {
         title='das refeições dentro da dieta'
       />
 
+      <Text style={{ paddingBottom: 20, fontSize: 16 }}>Refeições</Text>
+
       <Button
         title='Nova refeição'
-        teste='Refeições'
       />
 
 
       <SectionList
-      style={{marginTop: 25}}
+        style={{ marginTop: 5 }}
         sections={data}
         keyExtractor={item => item}
         renderItem={({ item }) => <SectionListFood title={item} />}
         renderSectionHeader={({ section }) => (
-          <Text style={{fontSize: 18, paddingBottom: 8, paddingTop: 15 }}>{section.title}</Text>
+          <Text style={{ fontSize: 18, paddingBottom: 8, paddingTop: 15, backgroundColor:'#fff' }}>{section.title}</Text>
         )}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{paddingBottom: 40}}
+        stickySectionHeadersEnabled = {true}
         
       />
 

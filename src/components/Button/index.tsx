@@ -6,13 +6,12 @@ import { Container, Icon, TitleButton } from './styles';
 
 type Props = {
   title: string;
-  teste?: string;
 }
 
-export function Button({ title, teste }: Props) {
+export function Button({ title }: Props) {
   return (
     <View>
-      <Text style={{paddingBottom: 20, fontSize: 16}}>{teste}</Text>
+      
       <Container activeOpacity={0.8}>
         <Icon />
         <TitleButton>

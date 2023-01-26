@@ -1,17 +1,21 @@
-import {Circle, Item, Title } from './styles';
-
-type Item = string
+import { Text } from 'react-native';
+import { CicleColor, Circle, Row, Group, Title, TitleHour, } from './styles';
 
 interface Props {
   title: string;
-  data?: Item[];
+  type?: CicleColor
 }
 
-export function SectionListFood({title, data}: Props){
-  return(
-    <Item>
-      <Title>{title}</Title>
-      <Circle></Circle>
-    </Item>
+export function SectionListFood({ title, type = 'PRIMARY' }: Props) {
+  return (
+    <Row>
+        <TitleHour>20:00 </TitleHour>
+      <Group>
+        <Title>{title}</Title>
+        <Circle
+          type={type}
+        ></Circle>
+      </Group>
+    </Row>
   )
 }
