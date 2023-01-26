@@ -4,6 +4,8 @@ import theme from './src/theme';
 
 import { Loading } from '@components/Loading';
 import { Home } from '@pages/Home';
+import { Statistics } from '@pages/Statistics/Index';
+
 
 import { StatusBar } from 'react-native';
 
@@ -13,11 +15,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar
-        barStyle='light-content'
+        barStyle='dark-content'
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Home /> : <Loading />}
+      {fontsLoaded ? <Statistics /> : <Loading />}
     </ThemeProvider>
   );
 }
