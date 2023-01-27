@@ -50,7 +50,7 @@ export function Home() {
 
       <Text style={{ paddingBottom: 20, fontSize: 16 }}>Refeições</Text>
 
-      <Button
+      <Button onPress={() => navigation.navigate('register')}
         title='Nova refeição'
       />
 
