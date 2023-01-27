@@ -6,8 +6,15 @@ type Props = {
   type: CardsColorRedOrGreen;
 }
 
+
+export const Title = styled.Text`
+  margin-bottom: 25px;
+  font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
+  font-size: ${({theme}) => theme.FONT_SIZE.MD}px;
+  text-align: center;
+`
+
 export const WraperStatistic = styled.View`
-  
   height: 100%;
   padding: 24px;
   border-top-left-radius: 20px;
@@ -16,6 +23,7 @@ export const WraperStatistic = styled.View`
   top: -12px;
   padding-left: 24px;
   padding-right: 24px;
+  background-color: #fff;
 `
 
 export const GroupColumns = styled.View`

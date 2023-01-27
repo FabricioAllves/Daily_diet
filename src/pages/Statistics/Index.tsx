@@ -1,7 +1,7 @@
 import { HeaderStatistic } from '@components/HeaderStatistic/Index';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { WraperStatistic, GroupColumns, TitleNumber, TitleDescription, GroupRowAll, GroupRow, CardsColorRedOrGreen } from './styles';
+import { WraperStatistic, GroupColumns, TitleNumber, TitleDescription, GroupRowAll, GroupRow, CardsColorRedOrGreen, Title } from './styles';
 
 
 type Props = {
@@ -17,7 +17,13 @@ export function Statistics({ type }: Props) {
         description='das refeições dentro da dieta'
       />
 
+
       <WraperStatistic>
+
+        <Title>
+          Estatísticas gerais
+        </Title>
+
         <GroupColumns>
           <TitleNumber>
             4
