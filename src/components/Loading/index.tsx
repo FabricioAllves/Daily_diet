@@ -6,8 +6,8 @@ export function Loading() {
   return (
     <Container>
       <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
+        barStyle='light-content'
+        backgroundColor='transparent'
         translucent
       />
       <LoadIndicator />

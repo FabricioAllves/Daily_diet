@@ -14,20 +14,20 @@ import { Container } from './styles';
 export function Home() {
   const [data, setData] = useState([
     {
-      title: "26.12.22",
-      data: ["Pizza", "Burger", "Risotto"],
+      title: '26.12.22',
+      data: ['Pizza', 'Burger', 'Risotto'],
     },
     {
-      title: "20.12.22",
-      data: ["French Fries", "Rings", "Fried Shrimps"]
+      title: '20.12.22',
+      data: ['French Fries', 'Rings', 'Fried Shrimps'],
     },
     {
-      title: "16.12.22",
-      data: ["Water", "Coke", "Beer"]
+      title: '16.12.22',
+      data: ['Water', 'Coke', 'Beer'],
     },
     {
-      title: "17.12.22",
-      data: ["Cheese Cake", "Ice Cream"]
+      title: '17.12.22',
+      data: ['Cheese Cake', 'Ice Cream'],
     }
   ])
 

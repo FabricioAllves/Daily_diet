@@ -11,7 +11,6 @@ type Props = {
 export function Button({ title }: Props) {
   return (
     <View>
-      
       <Container activeOpacity={0.8}>
         <Icon />
         <TitleButton>
