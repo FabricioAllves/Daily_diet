@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native'
 
 import { Button } from '@components/Button';
 import { Header } from '@components/Header';
@@ -12,6 +13,9 @@ import { Container } from './styles';
 
 
 export function Home() {
+
+  const navigation = useNavigation()
+
   const [data, setData] = useState([
     {
       title: '26.12.22',
@@ -31,10 +35,15 @@ export function Home() {
     }
   ])
 
+
+  function handleViewStatistics(){
+    navigation.navigate('statistics')
+  }
+
   return (
     <Container>
       <Header />
-      <PorcentageCard
+      <PorcentageCard onPress={handleViewStatistics}
         percentage='91,86%'
         title='das refeições dentro da dieta'
       />
@@ -52,12 +61,12 @@ export function Home() {
         keyExtractor={item => item}
         renderItem={({ item }) => <SectionListFood title={item} />}
         renderSectionHeader={({ section }) => (
-          <Text style={{ fontSize: 18, paddingBottom: 8, paddingTop: 15, backgroundColor:'#fff' }}>{section.title}</Text>
+          <Text style={{ fontSize: 18, paddingBottom: 8, paddingTop: 15, backgroundColor: '#EFF0F0' }}>{section.title}</Text>
         )}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{paddingBottom: 40}}
-        stickySectionHeadersEnabled = {true}
-        
+        contentContainerStyle={{ paddingBottom: 40 }}
+        stickySectionHeadersEnabled={true}
+
       />
 
     </Container>

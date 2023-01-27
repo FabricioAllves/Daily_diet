@@ -1,4 +1,6 @@
-import { HeaderStatistic } from '@components/HeaderStatistic/Index';
+
+
+import { HeaderStatistic } from '@components/HeaderStatistic';
 import { Text, View } from 'react-native';
 
 import { WraperStatistic, GroupColumns, TitleNumber, TitleDescription, GroupRowAll, GroupRow, CardsColorRedOrGreen, Title } from './styles';
@@ -10,6 +12,9 @@ type Props = {
 
 
 export function Statistics({ type }: Props) {
+
+ 
+
   return (
     <>
       <HeaderStatistic

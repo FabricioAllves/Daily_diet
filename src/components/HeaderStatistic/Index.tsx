@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import {TouchableOpacityProps} from 'react-native'
 
 import { BackButton, Container, IconButton,TitleWraper,Percentage,Description, ButtonTypeStyleProps } from './styles';
@@ -11,12 +12,15 @@ type Props = TouchableOpacityProps & {
 
 
 export function HeaderStatistic({type = 'PRIMARY', porcentage, description }: Props) {
+
+  const navigation = useNavigation()
+
   return (
     <Container
     type={type}
     >
 
-      <BackButton>
+      <BackButton  onPress={() => navigation.goBack()}>
         <IconButton />
       </BackButton>
 

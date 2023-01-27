@@ -10,7 +10,7 @@ type Props = TouchableOpacityProps & {
 export function PorcentageCard({ title, percentage, type = 'PRIMARY', ...rest }: Props) {
   return (
     <Container
-      activeOpacity={0.7}
+      activeOpacity={0.5}
       type={type}
       {...rest}
     >
