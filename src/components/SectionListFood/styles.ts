@@ -50,6 +50,6 @@ export const Group = styled.View`
   padding-left: 10px;
   padding-right: 5px;
   flex: 1;
-  border-left-width: 0.5px;
-  border-color: ${({theme}) => theme.COLORS.GRAY_700}
+  border-left-width: 1px;
+  border-color: ${({theme}) => theme.COLORS.GRAY_400}
 `
