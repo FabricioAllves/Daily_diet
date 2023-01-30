@@ -18,10 +18,11 @@ export function Register() {
         />
 
         <InputLabel
-          numberOfLines={5}
           multiline
+          numberOfLines={5}
           text="Descrição"
           sizeH="big"
+          style={{textAlignVertical: 'top', paddingTop: 10 }}
         />
 
         <Wrapper>

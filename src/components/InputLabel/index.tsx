@@ -15,6 +15,7 @@ export function InputLabel({ sizeH, text, ...rest }: Props) {
       </Label>
 
       <Input
+        numberOfLines={4}
         sizeH={sizeH}
         {...rest}
       />

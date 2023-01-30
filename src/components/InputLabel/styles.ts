@@ -21,4 +21,5 @@ export const Input = styled.TextInput<Props>`
   border-width: 0.5px;
   margin-bottom: 20px;
   padding-left: 10px;
+  padding-right: 10px;
 `;
