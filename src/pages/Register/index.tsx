@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { HeaderBackAndTitle } from "@components/HeaderBackAndTitle";
 import { InputLabel } from "@components/InputLabel";
+import { YesOrNo } from "@components/YesOrNo";
 import { View } from "react-native";
-import { Container, Wrapper, WrapperGroup } from "./styles";
+import { Container, Wrapper, WrapperGroup, ContainerButton } from "./styles";
 
 
 export function Register() {
+
+  const [statusSelected, setStatuSelected] = useState<'open' | 'closed'>('open')
+
   return (
     <>
       <HeaderBackAndTitle
@@ -22,7 +27,7 @@ export function Register() {
           numberOfLines={5}
           text="Descrição"
           sizeH="big"
-          style={{textAlignVertical: 'top', paddingTop: 10 }}
+          style={{ textAlignVertical: 'top', paddingTop: 10 }}
         />
 
         <Wrapper>
@@ -40,6 +45,24 @@ export function Register() {
             />
           </WrapperGroup>
         </Wrapper>
+
+        <ContainerButton>
+          <YesOrNo
+          title="Sim"
+            type="open"
+            onPress={() => setStatuSelected('open')}
+            isActive={statusSelected === 'open'}
+          />
+
+          <YesOrNo
+          title="Não"
+            type="closed"
+            onPress={() => setStatuSelected('closed')}
+            isActive={statusSelected === 'closed'}
+          />
+        </ContainerButton>
+
+
       </Container>
     </>
   )

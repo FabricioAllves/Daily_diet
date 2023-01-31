@@ -17,3 +17,8 @@ export const Wrapper = styled.View`
 export const WrapperGroup = styled.View`
   width: 48%;
 `;
+
+export const ContainerButton = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
