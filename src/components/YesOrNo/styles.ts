@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components/native';
 
 
+
+
 export type FilterStyleProps = {
   type: 'open' | 'closed';
   isActive?: boolean;
@@ -8,18 +10,18 @@ export type FilterStyleProps = {
 
 //const colorType = type === 'open' ? 'red' : 'green'
 
+
 export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
 `;
 
 export const Button = styled.TouchableOpacity<FilterStyleProps>`
-${({ theme, isActive }) => isActive && css`
-    background-color: ${theme.COLORS.RED_DARK};
-  `}
+
+  
   width: 48%;
   height: 50px;
-  
+  background-color: blue;
   border-radius: 6px;
   align-items: center;
   justify-content: center;

@@ -11,20 +11,23 @@ import { Button, Container, Text, FilterStyleProps } from './styles';
 
 
 
-type Props =  TouchableOpacityProps  &  FilterStyleProps &{
+type Props =  TouchableOpacityProps  & FilterStyleProps &{
   title: string
   
 }
 
 
-export function YesOrNo({isActive = false, type, title, ...rest}: Props) {
+export function YesOrNo({type, isActive = false, title, ...rest}: Props) {
 
+  const colorType = type == 'open' ? '#CBE4B4' : '#F3BABD'
 
-
-  const colorType = type === 'open' ? 'red' : 'green'
+  //const colorType = isActive ? 'red' : 'green'
+  //isActive ? 'red' : 'green'
 
   return (
-      <Button {...rest} type={type}>
+      <Button {...rest} type={type} isActive={isActive}
+      style={{backgroundColor: isActive ?  colorType : '#EFF0F0'}}
+      >
         <Text>
           {title}
         </Text>

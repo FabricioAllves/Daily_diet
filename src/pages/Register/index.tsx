@@ -8,7 +8,7 @@ import { Container, Wrapper, WrapperGroup, ContainerButton } from "./styles";
 
 export function Register() {
 
-  const [statusSelected, setStatuSelected] = useState<'open' | 'closed'>('open')
+  const [statusSelected, setStatuSelected] = useState('')
 
   return (
     <>
