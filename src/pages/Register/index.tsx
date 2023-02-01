@@ -4,11 +4,14 @@ import { InputLabel } from "@components/InputLabel";
 import { YesOrNo } from "@components/YesOrNo";
 import { Container, Wrapper, WrapperGroup, ContainerButton, TextLabel } from "./styles";
 import { Button } from "@components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 
 export function Register() {
 
   const [statusSelected, setStatuSelected] = useState('')
+
+  const navigation = useNavigation()
 
   return (
     <>
@@ -69,6 +72,7 @@ export function Register() {
         <Button
           viewIcon={false}
           title="Cadastrar refeição"
+          onPress={() => navigation.navigate('feedback')}
         />
 
 

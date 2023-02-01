@@ -12,8 +12,6 @@ export function YesOrNo({ type, isActive = false, title, ...rest }: Props) {
   const colorType = type == 'open' ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT
   const border = type == 'open' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK
 
-
-
   return (
     <Button {...rest} type={type} isActive={isActive}
       style={{
