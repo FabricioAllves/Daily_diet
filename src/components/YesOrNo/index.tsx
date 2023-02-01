@@ -1,4 +1,5 @@
 import { TouchableOpacityProps } from 'react-native';
+import theme from '../../theme'
 
 import { Button, Text, FilterStyleProps, Circle } from './styles';
 
@@ -8,18 +9,27 @@ type Props = TouchableOpacityProps & FilterStyleProps & {
 
 export function YesOrNo({ type, isActive = false, title, ...rest }: Props) {
 
-  const colorType = type == 'open' ? '#E5F0DB' : '#F4E6E7'
-  const border = type == 'open' ? '#639339' : '#BF3B44'
+  const colorType = type == 'open' ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT
+  const border = type == 'open' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK
+
+
 
   return (
     <Button {...rest} type={type} isActive={isActive}
       style={{
-        backgroundColor: isActive ? colorType : '#EFF0F0',
+        backgroundColor: isActive ? colorType : theme.COLORS.GRAY_200,
         borderWidth: isActive ? 1.2 : 0,
         borderColor: border
       }}
     >
-      <Circle style={{backgroundColor: type === 'open' ? '#639339' : '#BF3B44', marginRight:8}}></Circle>
+      <Circle
+        style={{
+          backgroundColor: type === 'open' ?
+            theme.COLORS.GREEN_DARK
+            : theme.COLORS.RED_DARK,
+          marginRight: 8
+        }}
+      />
       <Text>
         {title}
       </Text>
