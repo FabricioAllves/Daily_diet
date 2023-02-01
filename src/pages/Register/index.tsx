@@ -2,8 +2,8 @@ import { useState } from "react";
 import { HeaderBackAndTitle } from "@components/HeaderBackAndTitle";
 import { InputLabel } from "@components/InputLabel";
 import { YesOrNo } from "@components/YesOrNo";
-import { View } from "react-native";
-import { Container, Wrapper, WrapperGroup, ContainerButton } from "./styles";
+import { Container, Wrapper, WrapperGroup, ContainerButton, TextLabel } from "./styles";
+import { Button } from "@components/Button";
 
 
 export function Register() {
@@ -46,21 +46,31 @@ export function Register() {
           </WrapperGroup>
         </Wrapper>
 
+        <TextLabel>
+          Está dentro da dieta?
+        </TextLabel>
+
         <ContainerButton>
           <YesOrNo
-          title="Sim"
+            title="Sim"
             type="open"
             onPress={() => setStatuSelected('open')}
             isActive={statusSelected === 'open'}
           />
 
           <YesOrNo
-          title="Não"
+            title="Não"
             type="closed"
             onPress={() => setStatuSelected('closed')}
             isActive={statusSelected === 'closed'}
           />
         </ContainerButton>
+
+        <Button
+          viewIcon={false}
+          title="Cadastrar refeição"
+        />
+
 
 
       </Container>

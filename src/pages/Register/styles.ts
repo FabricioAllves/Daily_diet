@@ -18,7 +18,15 @@ export const WrapperGroup = styled.View`
   width: 48%;
 `;
 
+export const TextLabel = styled.Text`
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  margin-bottom: 12px;
+`;
+
+
 export const ContainerButton = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 100px;
 `;
