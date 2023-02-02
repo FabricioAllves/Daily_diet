@@ -8,7 +8,7 @@ type Props =  TouchableOpacityProps & {
   title: string;
   viewIcon?: boolean
 }
-
+''
 export function Button({ title, viewIcon = true, ...rest }: Props) {
   return (
     <View>
