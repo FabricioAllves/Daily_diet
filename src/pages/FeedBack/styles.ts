@@ -8,8 +8,6 @@ export const Container = styled.View`
 
 export const ContainerCenter = styled.View`
   justify-content: center;
-  align-items: center;
-  
 `;
 
 export const TitleHeader = styled.Text`
@@ -21,6 +19,6 @@ export const TitleHeader = styled.Text`
 
 export const SubTitle = styled.Text`
   font-size: ${({theme}) => theme.FONT_SIZE.MG}px;
-  margin-bottom: 8px;
+  margin-bottom: 50px;
 `;
 
